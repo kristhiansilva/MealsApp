@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet } from "react-native";
 
-import { CATEGORIES } from '../data/dummy-data'
+import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 
 function CategoriesScreen({ navigation }) {
@@ -8,10 +8,9 @@ function CategoriesScreen({ navigation }) {
     function pressHandler() {
       navigation.navigate("MealsOverview", {
         categoryId: itemData.item.id,
-        
       });
     }
-  
+
     return (
       <CategoryGridTile
         title={itemData.item.title}
@@ -33,5 +32,4 @@ function CategoriesScreen({ navigation }) {
 
 export default CategoriesScreen;
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});
